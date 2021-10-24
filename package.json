@@ -1,0 +1,30 @@
+{
+  "name": "node-navmesh",
+  "version": "1.0.0",
+  "description": "ue4.24.0 navmesh",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install": "node-gyp rebuild"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LiST-GIT/node-navmesh.git"
+  },
+  "keywords": [
+    "ue4",
+    "navmesh"
+  ],
+  "devDependencies": {
+    "node-gyp": "^3.8.0"
+  },
+  "dependencies": {
+    "node-addon-api": "*"
+  },
+  "author": "LiST",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LiST-GIT/node-navmesh/issues"
+  },
+  "homepage": "https://github.com/LiST-GIT/node-navmesh#readme"
+}
