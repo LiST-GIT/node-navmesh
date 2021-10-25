@@ -22,6 +22,7 @@
 #ifndef DETOURALLOCATOR_H
 #define DETOURALLOCATOR_H
 
+#include <stdlib.h>
 #include "CoreMinimal.h"
 
 /// Provides hint values to the memory allocator on how long the

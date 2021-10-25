@@ -266,7 +266,7 @@ Napi::Value Navmesh::FindNearestPoly(const Napi::CallbackInfo& info) {
   resultObject.Set("x", nearestPt[0]);
   resultObject.Set("y", nearestPt[1]);
   resultObject.Set("z", nearestPt[2]);
-  resultObject.Set("ref", Napi::BigInt::New(info.Env(), nearestRef));
+  resultObject.Set("ref", Napi::BigInt::New(info.Env(), (uint64_t)nearestRef));
   return resultObject;
 }
 
@@ -304,7 +304,7 @@ Napi::Value Navmesh::FindRandomPoint(const Napi::CallbackInfo& info) {
   resultObject.Set("x", randomPt[0]);
   resultObject.Set("y", randomPt[1]);
   resultObject.Set("z", randomPt[2]);
-  resultObject.Set("ref", Napi::BigInt::New(info.Env(), randomRef));
+  resultObject.Set("ref", Napi::BigInt::New(info.Env(), (uint64_t)randomRef));
   return resultObject;
 }
 
@@ -353,7 +353,7 @@ Napi::Value Navmesh::FindStraightPath(const Napi::CallbackInfo& info) {
     resultObject.Set("x", findStraightPathResult.getPos(index)[0]);
     resultObject.Set("y", findStraightPathResult.getPos(index)[1]);
     resultObject.Set("z", findStraightPathResult.getPos(index)[2]);
-    resultObject.Set("ref", Napi::BigInt::New(info.Env(), findPathResult.getRef(index)));
+    resultObject.Set("ref", Napi::BigInt::New(info.Env(), (uint64_t)findPathResult.getRef(index)));
     resultObject.Set("flag", findStraightPathResult.getFlag(index));
     resultObject.Set("cost", findPathResult.getCost(index));
     resultArray[index] = resultObject;
